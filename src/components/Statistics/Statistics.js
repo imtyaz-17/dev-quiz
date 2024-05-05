@@ -1,60 +1,34 @@
-import React, { PureComponent } from 'react';
-import { BarChart, Bar, ResponsiveContainer } from 'recharts';
-const Statistics = () => {
-    const data = [
-        {
-            name: 'Page A',
-            uv: 4000,
-            pv: 2400,
-            amt: 2400,
-        },
-        {
-            name: 'Page B',
-            uv: 3000,
-            pv: 1398,
-            amt: 2210,
-        },
-        {
-            name: 'Page C',
-            uv: 2000,
-            pv: 9800,
-            amt: 2290,
-        },
-        {
-            name: 'Page D',
-            uv: 2780,
-            pv: 3908,
-            amt: 2000,
-        },
-        {
-            name: 'Page E',
-            uv: 1890,
-            pv: 4800,
-            amt: 2181,
-        },
-        {
-            name: 'Page F',
-            uv: 2390,
-            pv: 3800,
-            amt: 2500,
-        },
-        {
-            name: 'Page G',
-            uv: 3490,
-            pv: 4300,
-            amt: 2100,
-        },
-    ];
-    return (
-        <div>
-            <h2>caaaa</h2>
-            <ResponsiveContainer width="100%" height="100%">
-                <BarChart width={150} height={40} data={data}>
-                    <Bar dataKey="uv" fill="#8884d8" />
-                </BarChart>
-            </ResponsiveContainer>
-        </div>
+import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, } from 'recharts';
 
+
+const Statistics = () => {
+    const quizData = useLoaderData();
+    const data = quizData.data;
+    return (
+        <div className='flex flex-col justify-center items-center font-bold m-3 '>
+            <h1 className="text-2xl text-center mb-3 ">LineChart</h1>
+            <LineChart
+                width={600}
+                height={400}
+                data={data}
+                margin={{
+                    top: 5,
+                    right: 0,
+                    left: 0,
+                    bottom: 0,
+                }}
+            >
+                <Line type="monotone" dataKey="total" stroke="#8884d8" activeDot={{ r: 8 }} />
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+            </LineChart>
+            <p className='text-xl w-1/2 text-center'>This line chart illustrates the distribution of quiz questions across four topics: JavaScript, CSS, Git, and React. The horizontal axis represents the topic names, while the vertical axis indicates the number of quiz questions.</p>
+        </div>
     );
 };
 

@@ -38,6 +38,15 @@ function App() {
         },
       ]
     },
+    {
+      path: "*",
+      element: (
+        <div className="text-center mt-5">
+          {/* <i class="fa-solid fa-triangle-exclamation text-danger fs-1"></i> */}
+          <h1>404 couldn't found the page!</h1>
+        </div>
+      ),
+    },
   ])
   return (
     <div>
