@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import Quiz from './components/Quiz/Quiz';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Statistics/Blog/Blog';
+import Error from './components/Error/Error';
 
 function App() {
   const router = createBrowserRouter([
@@ -40,12 +41,7 @@ function App() {
     },
     {
       path: "*",
-      element: (
-        <div className="text-center mt-5">
-          {/* <i class="fa-solid fa-triangle-exclamation text-danger fs-1"></i> */}
-          <h1>404 couldn't found the page!</h1>
-        </div>
-      ),
+      element: <Error></Error>,
     },
   ])
   return (
