@@ -7,7 +7,7 @@ const Quiz = () => {
     const quiz = useLoaderData();
     const quizData = quiz.data;
     const questions = quizData.questions;
-    console.log(quizData);
+    console.log('questions', questions);
     return (
         <div className='grid grid-cols-6 '>
             <div className='col-span-5 ml-6 mt-2 p-3 border-2 border-gray-200'>
