@@ -1,6 +1,8 @@
+## Live Link:
+    https://dev-quiz-imtyaz.netlify.app/
 ## Project Overview
 
-Welcome to my React.js-based website project named "Dev-Quiz"! This repository contains the codebase for a responsive web application designed to offer an interactive learning experience on various topics. Below are the key usage libray/framework of this project:
+Welcome to my React.js-based website project named "Dev-Quiz"! This repository contains the codebase for a responsive web application designed to offer an interactive learning experience on various topics. Below are the key usage library/framework of this project:
 
 - React.js
 - Tailwind CSS
