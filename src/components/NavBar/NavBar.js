@@ -9,7 +9,7 @@ const NavBar = () => {
             <div className='flex items-center flex-shrink-0 text-white mr-6 lg:mr-72'>
                 <h2 className='text-md sm:text-xl md:text-2xl lg:text-4xl font-bold'>Dev-Quiz</h2>
             </div>
-            <div className="block lg:hidden">
+            <div className="block  lg:hidden">
                 <button
                     onClick={() => setShowMenu(!showMenu)}
                     className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"

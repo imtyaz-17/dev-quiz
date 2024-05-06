@@ -36,14 +36,14 @@ const Question = ({ ques, indx }) => {
     };
 
     return (
-        <div className="bg-sky-300 rounded-5 shadow-lg p-4 container my-5">
+        <div className="bg-sky-300 rounded-5 shadow-lg p-4 container my-5 mx-auto max-w-full">
             <div className="flex justify-between items-center">
                 <span className="text-xl font-medium">Question - {indx + 1}: {htmlReactParser(question)}</span>
                 <h5 className='cursor-pointer p-4'>
                     <EyeIcon onClick={showCorrectAnswer} className="size-6 text-red-600 hover:text-lime-600" />
                 </h5>
             </div>
-            <div className='grid grid-cols-2 gap-2'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 gap-2'>
                 {options.map((option, index) => (
                     <Option key={index} option={option} handleAnswer={handleAnswer} />
                 ))}
