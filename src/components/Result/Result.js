@@ -16,13 +16,12 @@ const Result = ({ correct, wrong }) => {
             const score = (correctCount / totalQuestions) * 100;
             return score.toFixed(1);
         }
-
     };
 
     const score = calculateScore();
 
     return (
-        <div className='fixed right-0 bg-gray-100 p-8 shadow-lg'>
+        <div className='fixed right-0 bottom-0 bg-gray-100 md:bottom-auto md:right-auto md:p-md:shadow-none p-4 md:p-8 shadow-lg'>
             <h2 className="text-2xl font-bold mb-4 text-green-500">Quiz Result</h2>
             <div className="mb-4">
                 <p className="text-lg font-medium">Total Questions: {totalQuestions}</p>
@@ -33,7 +32,7 @@ const Result = ({ correct, wrong }) => {
             <div className="bg-gray-200 p-4 rounded-lg">
                 <p className="text-lg font-bold mb-2">Your Score:</p>
                 <div className="flex items-center justify-center">
-                    <div className="w-24 h-24 bg-blue-500 text-white rounded-full flex items-center justify-center text-3xl font-bold">
+                    <div className="w-24 h-24 sm:w-32 sm:h-32 bg-blue-500 text-white rounded-full flex items-center justify-center text-3xl sm:text-4xl font-bold">
                         {score}%
                     </div>
                 </div>

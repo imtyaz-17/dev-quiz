@@ -1,0 +1,11 @@
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #87ceeb;
+}

@@ -48,7 +48,6 @@ const Question = ({ ques, indx }) => {
                     <Option key={index} option={option} handleAnswer={handleAnswer} />
                 ))}
             </div>
-            {/* <ToastContainer /> */}
         </div>
     );
 };

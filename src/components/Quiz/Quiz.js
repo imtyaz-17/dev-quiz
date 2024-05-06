@@ -29,9 +29,9 @@ const Quiz = () => {
 
     return (
         <QuestionsContext.Provider value={questions}>
-            <div className='grid grid-cols-6'>
-                <div className='col-span-5 ml-6 mt-2 p-3 border-2 border-gray-200'>
-                    <h1 className='text-4xl text-center font-bold'>
+            <div className='grid grid-cols-1 md:grid-cols-6'>
+                <div className='md:col-span-5 ml-6 mt-2 p-3 border-2 border-gray-200'>
+                    <h1 className='text-4xl text-center font-bold mb-4 md:mb-6'>
                         <span className='text-sky-700'>{quizData.name}</span> Quiz
                     </h1>
                     <div>
@@ -42,7 +42,7 @@ const Quiz = () => {
                         </AnsweredContext.Provider>
                     </div>
                 </div>
-                <div>
+                <div className='md:col-span-1'>
                     <Result correct={correct} wrong={wrong} />
                 </div>
                 <ToastContainer />
